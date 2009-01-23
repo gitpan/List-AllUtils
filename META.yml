@@ -1,0 +1,23 @@
+---
+name: List-AllUtils
+version: 0.01
+author:
+  - 'Dave Rolsky, C<< <autarch@urth.org> >>'
+abstract: Combines List::Util and List::MoreUtils in one bite-sized package
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  List::MoreUtils: 0.22
+  List::Util: 1.19
+  perl: 5.008
+build_requires:
+  Test::More: 0
+provides:
+  List::AllUtils:
+    file: lib/List/AllUtils.pm
+    version: 0.01
+generated_by: Module::Build version 0.31012
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

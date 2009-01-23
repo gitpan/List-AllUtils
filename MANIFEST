@@ -1,0 +1,11 @@
+Build.PL
+Changes
+lib/List/AllUtils.pm
+MANIFEST			This list of files
+META.yml
+README
+t/01-basic.t
+t/kwalitee.t
+t/pod-coverage.t
+t/pod.t
+SIGNATURE    Added here by Module::Build
