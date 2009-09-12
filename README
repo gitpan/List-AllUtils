@@ -21,7 +21,6 @@ FUNCTIONS
     (Shamelessly copied from List::Util and List::MoreUtils ...)
 
   first BLOCK LIST
-
     Similar to `grep' in that it evaluates BLOCK setting `$_' to each
     element of LIST in turn. `first' returns the first element where the
     result from BLOCK is a true value. If BLOCK never returns true or LIST
@@ -39,7 +38,6 @@ FUNCTIONS
     defined value in @list
 
   max LIST
-
     Returns the entry in the list with the highest numerical value. If the
     list is empty then `undef' is returned.
 
@@ -52,7 +50,6 @@ FUNCTIONS
         $foo = reduce { $a > $b ? $a : $b } 1..10
 
   maxstr LIST
-
     Similar to `max', but treats all the entries in the list as strings and
     returns the highest string as defined by the `gt' operator. If the list
     is empty then `undef' is returned.
@@ -66,7 +63,6 @@ FUNCTIONS
         $foo = reduce { $a gt $b ? $a : $b } 'A'..'Z'
 
   min LIST
-
     Similar to `max' but returns the entry in the list with the lowest
     numerical value. If the list is empty then `undef' is returned.
 
@@ -79,7 +75,6 @@ FUNCTIONS
         $foo = reduce { $a < $b ? $a : $b } 1..10
 
   minstr LIST
-
     Similar to `min', but treats all the entries in the list as strings and
     returns the lowest string as defined by the `lt' operator. If the list
     is empty then `undef' is returned.
@@ -93,7 +88,6 @@ FUNCTIONS
         $foo = reduce { $a lt $b ? $a : $b } 'A'..'Z'
 
   reduce BLOCK LIST
-
     Reduces LIST by calling BLOCK, in a scalar context, multiple times,
     setting `$a' and `$b' each time. The first call will be with `$a' and
     `$b' set to the first two elements of the list, subsequent calls will be
@@ -110,13 +104,11 @@ FUNCTIONS
         $foo = reduce { $a . $b } @bar                  # concat
 
   shuffle LIST
-
     Returns the elements of LIST in a random order
 
         @cards = shuffle 0..51      # 0..51 in a random order
 
   sum LIST
-
     Returns the sum of all the elements in LIST. If LIST is empty then
     `undef' is returned.
 
@@ -129,7 +121,6 @@ FUNCTIONS
         $foo = reduce { $a + $b } 1..10
 
   any BLOCK LIST
-
     Returns a true value if any item in LIST meets the criterion given
     through BLOCK. Sets `$_' for each item in LIST in turn:
 
@@ -139,7 +130,6 @@ FUNCTIONS
     Returns false otherwise, or `undef' if LIST is empty.
 
   all BLOCK LIST
-
     Returns a true value if all items in LIST meet the criterion given
     through BLOCK. Sets `$_' for each item in LIST in turn:
 
@@ -149,7 +139,6 @@ FUNCTIONS
     Returns false otherwise, or `undef' if LIST is empty.
 
   none BLOCK LIST
-
     Logically the negation of `any'. Returns a true value if no item in LIST
     meets the criterion given through BLOCK. Sets `$_' for each item in LIST
     in turn:
@@ -160,7 +149,6 @@ FUNCTIONS
     Returns false otherwise, or `undef' if LIST is empty.
 
   notall BLOCK LIST
-
     Logically the negation of `all'. Returns a true value if not all items
     in LIST meet the criterion given through BLOCK. Sets `$_' for each item
     in LIST in turn:
@@ -171,23 +159,19 @@ FUNCTIONS
     Returns false otherwise, or `undef' if LIST is empty.
 
   true BLOCK LIST
-
     Counts the number of elements in LIST for which the criterion in BLOCK
     is true. Sets `$_' for each item in LIST in turn:
 
         printf "%i item(s) are defined", true { defined($_) } @list;
 
   false BLOCK LIST
-
     Counts the number of elements in LIST for which the criterion in BLOCK
     is false. Sets `$_' for each item in LIST in turn:
 
         printf "%i item(s) are not defined", false { defined($_) } @list;
 
   firstidx BLOCK LIST
-
   first_index BLOCK LIST
-
     Returns the index of the first element in LIST for which the criterion
     in BLOCK is true. Sets `$_' for each item in LIST in turn:
 
@@ -201,9 +185,7 @@ FUNCTIONS
     `first_index' is an alias for `firstidx'.
 
   lastidx BLOCK LIST
-
   last_index BLOCK LIST
-
     Returns the index of the last element in LIST for which the criterion in
     BLOCK is true. Sets `$_' for each item in LIST in turn:
 
@@ -217,7 +199,6 @@ FUNCTIONS
     `last_index' is an alias for `lastidx'.
 
   insert_after BLOCK VALUE LIST
-
     Inserts VALUE after the first item in LIST for which the criterion in
     BLOCK is true. Sets `$_' for each item in LIST in turn.
 
@@ -228,7 +209,6 @@ FUNCTIONS
         This is a longer list
 
   insert_after_string STRING VALUE LIST
-
     Inserts VALUE after the first item in LIST which is equal to STRING.
 
         my @list = qw/This is a list/;
@@ -238,7 +218,6 @@ FUNCTIONS
         This is a longer list
 
   apply BLOCK LIST
-
     Applies BLOCK to each item in LIST and returns a list of the values
     after BLOCK has been applied. In scalar context, the last element is
     returned. This function is similar to `map' but will not modify the
@@ -257,7 +236,6 @@ FUNCTIONS
         for (my @mult = @list) { $_ *= 2 }
 
   after BLOCK LIST
-
     Returns a list of the values of LIST after (and not including) the point
     where BLOCK returns a true value. Sets `$_' for each element in LIST in
     turn.
@@ -265,21 +243,17 @@ FUNCTIONS
         @x = after { $_ % 5 == 0 } (1..9);    # returns 6, 7, 8, 9
 
   after_incl BLOCK LIST
-
     Same as `after' but also inclues the element for which BLOCK is true.
 
   before BLOCK LIST
-
     Returns a list of values of LIST upto (and not including) the point
     where BLOCK returns a true value. Sets `$_' for each element in LIST in
     turn.
 
   before_incl BLOCK LIST
-
     Same as `before' but also includes the element for which BLOCK is true.
 
   indexes BLOCK LIST
-
     Evaluates BLOCK for each element in LIST (assigned to `$_') and returns
     a list of the indices of those elements for which BLOCK returned a true
     value. This is just like `grep' only that it returns indices instead of
@@ -288,9 +262,7 @@ FUNCTIONS
         @x = indexes { $_ % 2 == 0 } (1..10);   # returns 1, 3, 5, 7, 9
 
   firstval BLOCK LIST
-
   first_value BLOCK LIST
-
     Returns the first element in LIST for which BLOCK evaluates to true.
     Each element of LIST is set to `$_' in turn. Returns `undef' if no such
     element has been found.
@@ -298,9 +270,7 @@ FUNCTIONS
     `first_val' is an alias for `firstval'.
 
   lastval BLOCK LIST
-
   last_value BLOCK LIST
-
     Returns the last value in LIST for which BLOCK evaluates to true. Each
     element of LIST is set to `$_' in turn. Returns `undef' if no such
     element has been found.
@@ -308,7 +278,6 @@ FUNCTIONS
     `last_val' is an alias for `lastval'.
 
   pairwise BLOCK ARRAY1 ARRAY2
-
     Evaluates BLOCK for each pair of elements in ARRAY1 and ARRAY2 and
     returns a new list consisting of BLOCK's return values. The two elements
     are set to `$a' and `$b'. Note that those two are aliases to the
@@ -324,7 +293,6 @@ FUNCTIONS
         @x = pairwise { ($a, $b) } @a, @b;  # returns a, 1, b, 2, c, 3
 
   each_array ARRAY1 ARRAY2 ...
-
     Creates an array iterator to return the elements of the list of arrays
     ARRAY1, ARRAY2 throughout ARRAYn in turn. That is, the first time it is
     called, it returns the first element of each array. The next time, it
@@ -343,12 +311,10 @@ FUNCTIONS
     index of the last fetched set of values, as a scalar.
 
   each_arrayref LIST
-
     Like each_array, but the arguments are references to arrays, not the
     plain arrays.
 
   natatime BLOCK LIST
-
     Creates an array iterator, for looping over an array in chunks of `$n'
     items at a time. (n at a time, get it?). An example is probably a better
     explanation than I could give in words.
@@ -369,9 +335,7 @@ FUNCTIONS
         g
 
   mesh ARRAY1 ARRAY2 [ ARRAY3 ... ]
-
   zip ARRAY1 ARRAY2 [ ARRAY3 ... ]
-
     Returns a list consisting of the first elements of each array, then the
     second, then the third, etc, until all arrays are exhausted.
 
@@ -389,7 +353,6 @@ FUNCTIONS
     `zip' is an alias for `mesh'.
 
   uniq LIST
-
     Returns a new list by stripping duplicate values in LIST. The order of
     elements in the returned list is the same as in LIST. In scalar context,
     returns the number of unique elements in LIST.
@@ -398,7 +361,6 @@ FUNCTIONS
         my $x = uniq 1, 1, 2, 2, 3, 5, 3, 4; # returns 5
 
   minmax LIST
-
     Calculates the minimum and maximum of LIST and returns a two element
     list with the first element being the minimum and the second the
     maximum. Returns the empty list if LIST was empty.
@@ -414,7 +376,6 @@ FUNCTIONS
     implementation. This limitation does not apply to the XS version.
 
   part BLOCK LIST
-
     Partitions LIST based on the return value of BLOCK which denotes into
     which partition the current value is put.
 

@@ -3,9 +3,14 @@ package List::AllUtils;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
-use List::Util qw( first min max minstr maxstr reduce sum shuffle );
+# List::Util does not define an :all tag
+BEGIN
+{
+    require List::Util;
+    List::Util->import( @List::Util::EXPORT_OK );
+}
 use List::MoreUtils qw( :all );
 
 use base 'Exporter';
