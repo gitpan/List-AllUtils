@@ -1,25 +1,26 @@
 ---
-name: List-AllUtils
-version: 0.02
+abstract: 'Combines List::Util and List::MoreUtils in one bite-sized package'
 author:
-  - 'Dave Rolsky, C<< <autarch@urth.org> >>'
-abstract: Combines List::Util and List::MoreUtils in one bite-sized package
-license: perl
-resources:
-  license: http://dev.perl.org/licenses/
+  - 'Dave Rolsky <autarch@urth.org>'
 build_requires:
-  Test::More: 0
-requires:
-  List::MoreUtils: 0.22
-  List::Util: 1.19
-  perl: 5.008
+  Test::More: 0.88
 configure_requires:
-  Module::Build: 0.35
-provides:
-  List::AllUtils:
-    file: lib/List/AllUtils.pm
-    version: 0.02
-generated_by: Module::Build version 0.35
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.120351'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
+name: List-AllUtils
+requires:
+  Exporter: 0
+  List::MoreUtils: 0.28
+  List::Util: 0
+  base: 0
+  strict: 0
+  warnings: 0
+resources:
+  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=List-AllUtils
+  repository: git://git.urth.org/List-AllUtils.git
+version: 0.03

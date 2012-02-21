@@ -1,12 +1,18 @@
-Build.PL
 Changes
-lib/List/AllUtils.pm
-MANIFEST			This list of files
+INSTALL
+LICENSE
+MANIFEST
+META.json
 META.yml
-README
-t/01-basic.t
-t/kwalitee.t
-t/pod-coverage.t
-t/pod.t
 Makefile.PL
-SIGNATURE    Added here by Module::Build
+README
+dist.ini
+lib/List/AllUtils.pm
+t/01-basic.t
+t/release-cpan-changes.t
+t/release-eol.t
+t/release-no-tabs.t
+t/release-pod-coverage.t
+t/release-pod-linkcheck.t
+t/release-pod-no404s.t
+t/release-pod-syntax.t
