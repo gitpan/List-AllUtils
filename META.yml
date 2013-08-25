@@ -3,12 +3,14 @@ abstract: 'Combines List::Util and List::MoreUtils in one bite-sized package'
 author:
   - 'Dave Rolsky <autarch@urth.org>'
 build_requires:
+  File::Find: 0
+  File::Temp: 0
   Test::More: 0.88
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.120351'
-license: perl
+generated_by: 'Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560'
+license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -16,11 +18,13 @@ name: List-AllUtils
 requires:
   Exporter: 0
   List::MoreUtils: 0.28
-  List::Util: 0
+  List::Util: 1.1
   base: 0
   strict: 0
   warnings: 0
 resources:
-  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=List-AllUtils
+  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=List-AllUtils
+  homepage: http://metacpan.org/release/List-AllUtils
   repository: git://git.urth.org/List-AllUtils.git
-version: 0.03
+version: 0.04
+x_authority: cpan:DROLSKY

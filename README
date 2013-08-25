@@ -1,13 +1,14 @@
 
 
 This archive contains the distribution List-AllUtils,
-version 0.03:
+version 0.04:
 
   Combines List::Util and List::MoreUtils in one bite-sized package
 
-This software is copyright (c) 2012 by Dave Rolsky.
+This software is Copyright (c) 2013 by Dave Rolsky.
 
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
 
 

@@ -8,7 +8,9 @@ Makefile.PL
 README
 dist.ini
 lib/List/AllUtils.pm
+t/00-compile.t
 t/01-basic.t
+t/author-pod-spell.t
 t/release-cpan-changes.t
 t/release-eol.t
 t/release-no-tabs.t
