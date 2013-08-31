@@ -22,7 +22,7 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Exporter" => 0,
     "List::MoreUtils" => "0.28",
-    "List::Util" => "1.1",
+    "List::Util" => "1.31",
     "base" => 0,
     "strict" => 0,
     "warnings" => 0
@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     "File::Temp" => 0,
     "Test::More" => "0.88"
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.05",
   "test" => {
     "TESTS" => "t/*.t"
   }

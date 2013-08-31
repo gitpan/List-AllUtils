@@ -1,6 +1,6 @@
 package List::AllUtils;
 {
-  $List::AllUtils::VERSION = '0.04';
+  $List::AllUtils::VERSION = '0.05';
 }
 BEGIN {
   $List::AllUtils::AUTHORITY = 'cpan:DROLSKY';
@@ -12,8 +12,7 @@ use warnings;
 # List::Util does not define an :all tag
 BEGIN
 {
-    require List::Util;
-    List::Util->VERSION(1.1);
+    use List::Util 1.31 ();
     List::Util->import( @List::Util::EXPORT_OK );
 }
 use List::MoreUtils 0.28 qw( :all );
@@ -39,7 +38,7 @@ List::AllUtils - Combines List::Util and List::MoreUtils in one bite-sized packa
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

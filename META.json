@@ -4,7 +4,7 @@
       "Dave Rolsky <autarch@urth.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Dist::Zilla version 4.300037, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "artistic_2"
    ],
@@ -31,7 +31,7 @@
          "requires" : {
             "Exporter" : "0",
             "List::MoreUtils" : "0.28",
-            "List::Util" : "1.1",
+            "List::Util" : "1.31",
             "base" : "0",
             "strict" : "0",
             "warnings" : "0"
@@ -58,7 +58,7 @@
          "web" : "http://git.urth.org/List-AllUtils.git"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_authority" : "cpan:DROLSKY"
 }
 
