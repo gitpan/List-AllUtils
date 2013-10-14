@@ -1,6 +1,6 @@
 package List::AllUtils;
 {
-  $List::AllUtils::VERSION = '0.06';
+  $List::AllUtils::VERSION = '0.07';
 }
 BEGIN {
   $List::AllUtils::AUTHORITY = 'cpan:DROLSKY';
@@ -18,7 +18,7 @@ BEGIN {
 
     my %imported = map { $_ => 1 } @List::Util::EXPORT_OK;
     List::MoreUtils->import( grep { !$imported{$_} }
-            @{ $List::MoreUtils::EXPORT_TAGS{':all'} } );
+            @{ $List::MoreUtils::EXPORT_TAGS{all} } );
 }
 
 use base 'Exporter';
@@ -41,7 +41,7 @@ List::AllUtils - Combines List::Util and List::MoreUtils in one bite-sized packa
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
