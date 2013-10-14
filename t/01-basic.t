@@ -1,10 +1,17 @@
 use strict;
 use warnings;
 
+# This is needed to produce sub redefined warnings from List::AllUtils when
+# List::Util and List::MoreUtils export some of the same subs. I'm not sure
+# why.
+BEGIN {
+    $^W++;
+}
+
 use Test::More 0.88;
+use Test::Warnings;
 
 {
-
     package Foo;
 
     use List::AllUtils;
@@ -13,7 +20,6 @@ use Test::More 0.88;
 ok( !Foo->can('first'), 'no exports by default' );
 
 {
-
     package Bar;
 
     use List::AllUtils qw( first any );
@@ -24,7 +30,6 @@ ok( Bar->can('any'),   'explicitly import any' );
 ok( !Bar->can('all'),  'did not import all' );
 
 {
-
     package Baz;
 
     use List::AllUtils qw( :all );

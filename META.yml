@@ -6,10 +6,11 @@ build_requires:
   File::Find: 0
   File::Temp: 0
   Test::More: 0.88
+  Test::Warnings: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300037, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.131560'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -26,5 +27,5 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=List-AllUtils
   homepage: http://metacpan.org/release/List-AllUtils
   repository: git://git.urth.org/List-AllUtils.git
-version: 0.05
+version: 0.06
 x_authority: cpan:DROLSKY
