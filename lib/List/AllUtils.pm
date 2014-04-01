@@ -1,11 +1,5 @@
 package List::AllUtils;
-{
-  $List::AllUtils::VERSION = '0.07';
-}
-BEGIN {
-  $List::AllUtils::AUTHORITY = 'cpan:DROLSKY';
-}
-
+$List::AllUtils::VERSION = '0.08';
 use strict;
 use warnings;
 
@@ -18,7 +12,7 @@ BEGIN {
 
     my %imported = map { $_ => 1 } @List::Util::EXPORT_OK;
     List::MoreUtils->import( grep { !$imported{$_} }
-            @{ $List::MoreUtils::EXPORT_TAGS{all} } );
+            @List::MoreUtils::EXPORT_OK );
 }
 
 use base 'Exporter';
@@ -41,7 +35,7 @@ List::AllUtils - Combines List::Util and List::MoreUtils in one bite-sized packa
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -50,6 +44,7 @@ version 0.07
     # _Everything_ from List::Util and List::MoreUtils
     use List::AllUtils qw( :all );
 
+    my @numbers = ( 1, 2, 3, 5, 7 );
     # or don't import anything
     return List::AllUtils::first { $_ > 5 } @numbers;
 
@@ -590,7 +585,8 @@ Be careful with negative values, though:
     __END__
     Modification of non-creatable array value attempted, subscript -1 ...
 
-Negative values are only ok when they refer to a partition previously created:
+Negative values are only okay when they refer to a partition previously
+created:
 
     my @idx  = ( 0, 1, -1 );
     my $i    = 0;
@@ -621,7 +617,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2013 by Dave Rolsky.
+This software is Copyright (c) 2014 by Dave Rolsky.
 
 This is free software, licensed under:
 
